@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: redis-deployment
-spec: 
+spec:
   replicas: 1
   selector:
     matchLabels:
@@ -13,7 +13,7 @@ spec:
         component: redis
     spec:
       containers:
-      - name: redis
-        image: redis
-        ports:
-          - containerPort: 6379
+        - name: redis
+          image: redis
+          ports:
+            - containerPort: 6379
